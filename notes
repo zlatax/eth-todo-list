@@ -1,0 +1,21 @@
+truffle CLI + console commands
+
+truffle compile
+ - simply compiles code after changes have been made to prepare for deployment
+
+ truffle migrate
+ - applies smart contracts to the blockchain
+ - --reset tag will renew existing smart contracts if changes have been made
+
+truffle console
+ - start truffle console
+
+    varName = await variable
+     - asynchronous call to get variable from existing smart contract
+     - note that the contract has to be deployed. 
+
+
+
+Other notes
+- have to connect the browser to the blockchain -> use metamask
+- need client side to connect to the blockchain -> web3 allows for communication
