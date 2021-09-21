@@ -55,7 +55,11 @@ App = {
     App.contracts.TodoList.setProvider(App.web3Provider)
 
     // Hydrate the smart contract with values from the blockchain
-    App.todoList = await App.contracts.TodoList.deployed()
+    try {
+        App.todoList = await App.contracts.TodoList.deployed()
+    } catch(error) {
+        console.warn("TodoList: Please connect to the correct ETH network. Cannot find deployed smart contract!")
+    }
   },
 
   render: async () => {
